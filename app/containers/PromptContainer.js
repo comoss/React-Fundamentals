@@ -1,7 +1,6 @@
 var React = require('react');
 var Prompt = require('../components/Prompt');
 
-
 var PromptContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -19,7 +18,6 @@ var PromptContainer = React.createClass({
     });
 
     if (this.props.routeParams.playerOne) {
-      console.log(this.context.router)
       this.context.router.push({
         pathname: '/battle',
         query: {
@@ -28,7 +26,6 @@ var PromptContainer = React.createClass({
         }
       })
     } else {
-      console.log(this.context.router)
       this.context.router.push('/playerTwo/' + this.state.username)
     }
   },
@@ -43,8 +40,7 @@ var PromptContainer = React.createClass({
         onSubmitUser={this.handleSubmitUser}
         onUpdateUser={this.handleUpdateUser}
         header={this.props.route.header}
-        username={this.state.username}
-        />
+        username={this.state.username} />
     )
   }
 });

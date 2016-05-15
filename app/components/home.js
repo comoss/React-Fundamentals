@@ -19,7 +19,9 @@ var Home = React.createClass({
         <Link to='/playerOne'>
           <button
             type='button'
-            className='btn btn-lg btn-success'>Get Started</button>
+            className='btn btn-lg btn-success'>
+            Get Started
+          </button>
         </Link>
       </div>
     )
